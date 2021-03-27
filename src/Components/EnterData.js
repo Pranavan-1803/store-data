@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import './EnterData.css'
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 function EnterData() {
+
+    let history = useHistory();
+
 
     const [input, setInput] = useState({
         name:'',
@@ -35,11 +38,13 @@ function EnterData() {
         }
 
         axios.post('http://localhost:3001/create', newTask)
+
+        history.push("/submit");
     }
 
 
     return (
-        <div className="container"> 
+        <div className="container">
             <form>
             <label> Name: <input type="text" name="name" onChange={handleChange}/> </label>
             <label for="birthday"> Birthday: <input type="date" id="birthday" name="birthday" onChange={handleChange}/> </label>

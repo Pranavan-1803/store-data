@@ -5,6 +5,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import EnterData from './Components/EnterData';
 import ShowData from './Components/ShowData';
+import Submit from './Components/Submit';
 
 
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/showuserdata">
           <ShowData />
+        </Route>
+        <Route path="/submit">
+          <Submit />
         </Route>
         </Switch>
       </Router>
