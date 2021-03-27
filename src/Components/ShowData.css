@@ -1,0 +1,16 @@
+.info {
+    padding: 100px;
+}
+
+.info h1{
+    padding: 60px 0px 0px 30px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding-bottom: 30px;
+    color: green;
+
+}
+
+.info h3{
+    padding-left: 400px;
+}

@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import './EnterData.css'
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function EnterData() {
 
@@ -37,7 +39,7 @@ function EnterData() {
 
 
     return (
-        <div className="container">
+        <div className="container"> 
             <form>
             <label> Name: <input type="text" name="name" onChange={handleChange}/> </label>
             <label for="birthday"> Birthday: <input type="date" id="birthday" name="birthday" onChange={handleChange}/> </label>
@@ -46,9 +48,12 @@ function EnterData() {
             <label for="mobile">Mobile:<input type="number" name="mobile" onChange={handleChange}/></label>
 
             <label><input type="submit" value="Submit" onClick={handleClick}/></label>
-
-
             </form>
+
+            <Link to='/'>
+                <h3>Go to home</h3>
+            </Link>
+
         </div>
     )
 }
